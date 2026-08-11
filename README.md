@@ -15,3 +15,14 @@ The visualizations below are all generated from the codes above using these grou
 
 Rev-Recall@k over different parameter $k$ in different RANNS methods via different datasets.
 
+<img width="1865" height="621" alt="Figure_11" src="https://github.com/user-attachments/assets/81d905b1-b8a2-4540-8b01-deafc2c14c2b" />
+
+Rev-Recall over different parameter $k$ in different RANNS methods via different datasets.
+
+<img width="1350" height="1071" alt="Figure_6" src="https://github.com/user-attachments/assets/d86852e5-5d4a-4169-b5e9-d9e8da0fd852" />
+
+QPS vs. Rev-Recall over different RANNS methods via different datasets. ($k=50$)
+
+Note that HNSW, HAMG, NN-Descent, NSG, RabitQ are all the ANNS algorithms, while Range exploration, Hop exploration and our method Density-Exploration are all the RANNS algorithms. 
+ANNS methods will be used in RANNS, which means that ANNS algorithms have a inclusion relationship in RANNS. We here use RabitQ as a reference to imply that our DE method can be implenmented via non-graph ANNS method to show that our method is capable of both graph-based and non-graph based ANNS algorithms.
+
