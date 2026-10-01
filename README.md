@@ -30,9 +30,8 @@ The generated ground-truth results are available in the following Google Drive f
 
 For reverse search, each candidate is evaluated using its own k-NN radius. Let $r_k(p)$ denote the distance from a data point $p$ to its k-th nearest neighbor. The ground-truth reverse-neighbor set of query $q$ is
 
-$$
-\mathcal{R}_k(q)=\{p\in\mathcal{P}:\operatorname{dist}(p,q)\leq r_k(p)\}.
-$$
+$$ \mathcal{R}_k(q)=\{p\in\mathcal{P}:\operatorname{dist}(p,q)\leq r_k(p)\}. $$
+
 
 For experiments with different values of k, verification uses the neighborhood radius at the corresponding rank. The value of k specifies the forward neighborhood size; the number of reverse neighbors can vary across queries.
 
