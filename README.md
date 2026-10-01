@@ -12,7 +12,8 @@ where the results are stored in Google Drive folder: https://drive.google.com/dr
 
 The visualizations below are all generated from the codes above using these ground-truth results, illustrating the comparison of other SOTA RANNS algorithms:
 
-<img width="2400" height="1000" alt="Figure_5" src="https://github.com/user-attachments/assets/9c5a6eda-a59b-41f6-aed3-9a4f7608cbf9" />
+<img width="1931" height="871" alt="Figure_6_new" src="https://github.com/user-attachments/assets/fe533b7e-de6e-4c18-98eb-83ffe4f679db" />
+
 
 Rev-Recall@k over different parameter $k$ in different RANNS methods via different datasets.
 
@@ -20,7 +21,7 @@ Rev-Recall@k over different parameter $k$ in different RANNS methods via differe
 
 Rev-Recall over different parameter $k$ in different RANNS methods via different datasets.
 
-<img width="1350" height="1071" alt="Figure_6" src="https://github.com/user-attachments/assets/d86852e5-5d4a-4169-b5e9-d9e8da0fd852" />
+<img width="4740" height="4356" alt="Figure_5_ne" src="https://github.com/user-attachments/assets/282c076e-ee06-402f-a7a2-6b9827b76614" />
 
 QPS vs. Rev-Recall over different RANNS methods via different datasets. ($k=50$)
 
