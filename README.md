@@ -14,8 +14,6 @@ $$
 \mathcal{R}_k(q)=\{p\in\mathcal{P}:\operatorname{dist}(p,q)\le r_k(p)\}.
 $$
 
-<img width="866" height="979" alt="download" src="https://github.com/user-attachments/assets/920adfa9-3719-4ea6-a60d-8a7a75df1e42" />
-
 The number of reverse neighbors varies across queries and need not equal $k$. A distant point can still be a reverse neighbor when its own neighborhood radius is large enough to cover the query.
 
 DE starts with forward ANN retrieval, then uses a local sparsity signal to guide graph exploration. A spatial bound limits expansion around the query. The candidate verification cap $B$ limits the number of distinct candidates passed to verification; it is separate from the index-entry access budget used in the paper's hardness analysis.
