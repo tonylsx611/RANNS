@@ -109,7 +109,7 @@ Figure 7 uses SIFT1M, $k=50$, and $B=3200$. Within each index, the four variants
   <img
     src="https://github.com/user-attachments/assets/4fbb1884-210c-40fb-9d30-2aaa741c7f50"
     alt="Component ablation"
-    width="75%"
+    width="50%"
   />
 </p>
 
@@ -125,7 +125,13 @@ Fix $B=3200$ and $R_{\max}=10\widehat r_k(q)$, then vary $\alpha$. The transitio
 
 Figure 9 reports **absolute percentage-point gains** over density-disabled traversal on the same graph. These are differences in recall, not raw recall values or relative percentage improvements. Use the finite tolerance grid recorded with the experimental configuration.
 
-<img width="853" height="930" alt="image" src="https://github.com/user-attachments/assets/66e489e9-9f89-4d7c-bae9-df5406510c4d" />
+<p align="center">
+  <img
+    src="https://github.com/user-attachments/assets/66e489e9-9f89-4d7c-bae9-df5406510c4d"
+    alt="Component ablation"
+    width="50%"
+  />
+</p>
 
 
 ### Maximum Expansion Radius
@@ -138,8 +144,13 @@ $$
 
 Infinity disables the spatial cap. Figure 10 compares density-enabled and density-disabled traversal **at the same radius on the same index**. An excessively tight radius can restrict useful paths, so increasing pruning strength does not necessarily improve recall.
 
-<img width="867" height="930" alt="image" src="https://github.com/user-attachments/assets/bdf961c9-03df-4a79-88dd-81417686d4fc" />
-
+<p align="center">
+  <img
+    src="https://github.com/user-attachments/assets/bdf961c9-03df-4a79-88dd-81417686d4fc"
+    alt="Component ablation"
+    width="50%"
+  />
+</p>
 
 ## Distant-Neighbor Discovery and Costs
 
@@ -147,15 +158,25 @@ Infinity disables the spatial cap. Figure 10 compares density-enabled and densit
 
 Record each true distant reverse neighbor's first position in the ordered candidate list from the longest traversal. Prefixes of that list measure cumulative discovery as the available candidate budget grows. The study checks the five budget endpoints against separately measured shorter runs.
 
-<img width="1066" height="561" alt="image" src="https://github.com/user-attachments/assets/db22a569-647d-4888-bdc8-201feb050924" />
-
+<p align="center">
+  <img
+    src="https://github.com/user-attachments/assets/db22a569-647d-4888-bdc8-201feb050924"
+    alt="Component ablation"
+    width="50%"
+  />
+</p>
 
 ### Cost Breakdown
 
 The cost study uses $k=50$, $B=3200$, $\alpha=1$, and $R_{\max}=10\widehat r_k(q)$. It separates target-graph construction, shared offline density preparation, native ANN initialization, and DE exploration.
 
-<img width="863" height="971" alt="image" src="https://github.com/user-attachments/assets/15be2e0b-494d-48ef-86ab-336748e017f8" />
-
+<p align="center">
+  <img
+    src="https://github.com/user-attachments/assets/15be2e0b-494d-48ef-86ab-336748e017f8"
+    alt="Component ablation"
+    width="50%"
+  />
+</p>
 
 The figure compares DE integrations across graph indexes. It does not time all competing RANNS methods. NSG construction includes its NN-Descent input graph. The common HNSW reference and density scores are offline preparation costs; they are not repeated for each query.
 
