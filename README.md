@@ -103,7 +103,7 @@ The ablation isolates **density guidance (DG)** and **spatial bounding (SB)**:
 | **+SB / Spatial only** | Disabled | Enabled |
 | **Full / Full DE** | Enabled | Enabled |
 
-Figure 7 uses SIFT1M, $k=50$, and $B=3200$. Within each index, the four variants share the native graph, initial retrieval of 50 distinct nonself candidates, and adjacency order. Density-enabled variants use $\alpha=1$; spatial-enabled variants use $R_{\max}=1.25\widehat r_k(q)$ so the bound is active. This is a diagnostic radius setting, distinct from the larger radius used in the tolerance and cost studies.
+Figure 7 uses SIFT1M, $k=50$, and $B=3200$. Within each index, the four variants share the native graph, initial retrieval of 50 distinct nonself candidates, and adjacency order. Density-enabled variants use $\alpha=1$, spatial-enabled variants use  $R_{\max}=1.25\widehat r_k(q)$ so the bound is active. This is a diagnostic radius setting, distinct from the larger radius used in the tolerance and cost studies.
 
 <p align="center">
   <img
@@ -188,15 +188,25 @@ Individual-query stage means and parallel batch QPS are different measurements. 
 
 The comparison covers five datasets and four graph indexes, with RaBitQ included as a non-graph reference.
 
-<img width="4740" height="4356" alt="image" src="https://github.com/user-attachments/assets/1000ff0c-158d-48b3-9ac7-2b67e04621a3" />
-
+<p align="center">
+  <img
+    src="https://github.com/user-attachments/assets/1000ff0c-158d-48b3-9ac7-2b67e04621a3"
+    alt="Component ablation"
+    width="100%"
+  />
+</p>
 
 ### Neighborhood Size on SIFT1M and GIST1M — Figures 6 and 8
 
 The combined figure presents the SIFT1M results in the top row and GIST1M results in the bottom row, varying `k` across the four graph indexes. These correspond to Figure 8 and Figure 6 in the paper, respectively.
 
-<img width="1931" height="871" alt="image" src="https://github.com/user-attachments/assets/9a22aeed-0a76-4b3b-8b09-8caa46016df3" />
-
+<p align="center">
+  <img
+    src="https://github.com/user-attachments/assets/9a22aeed-0a76-4b3b-8b09-8caa46016df3"
+    alt="Component ablation"
+    width="100%"
+  />
+</p>
 
 ## Reproduction Workflow
 
