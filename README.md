@@ -10,8 +10,7 @@ This README describes the experimental settings and results reported in the pape
 
 For a query $q$, reverse $k$-nearest neighbor search identifies data points that regard $q$ as one of their $k$ nearest neighbors. Let $r_k(p)$ be the distance from $p$ to its $k$-th nearest **nonself** neighbor. The exact reverse-neighbor set is
 
-$$
-\mathcal{R}_k(q)=\{p\in\mathcal{P}:\operatorname{dist}(p,q)\le r_k(p)\}.
+$$\mathcal{R}_k(q)=\{p\in\mathcal{P}:\operatorname{dist}(p,q)\le r_k(p)\}.<img width="866" height="979" alt="download" src="https://github.com/user-attachments/assets/920adfa9-3719-4ea6-a60d-8a7a75df1e42" />
 $$
 
 The number of reverse neighbors varies across queries and need not equal $k$. A distant point can still be a reverse neighbor when its own neighborhood radius is large enough to cover the query.
@@ -105,7 +104,8 @@ The ablation isolates **density guidance (DG)** and **spatial bounding (SB)**:
 
 Figure 7 uses SIFT1M, $k=50$, and $B=3200$. Within each index, the four variants share the native graph, initial retrieval of 50 distinct nonself candidates, and adjacency order. Density-enabled variants use $\alpha=1$; spatial-enabled variants use $R_{\max}=1.25\widehat r_k(q)$ so the bound is active. This is a diagnostic radius setting, distinct from the larger radius used in the tolerance and cost studies.
 
-![Component ablation: overall and distant reverse recall](docs/assets/figure07_ablation.png)
+<img width="866" height="979" alt="image" src="https://github.com/user-attachments/assets/4fbb1884-210c-40fb-9d30-2aaa741c7f50" />
+
 
 At the displayed budget, each component improves overall and distant reverse recall over Base across the four indexes, and Full gives the highest recall on both metrics. The benefit is not universal across budgets: on NN-Descent at $B=12800$, Full has lower Rev-Recall than +SB. Interpret component gains under their reported budget and radius settings.
 
@@ -119,7 +119,8 @@ Fix $B=3200$ and $R_{\max}=10\widehat r_k(q)$, then vary $\alpha$. The transitio
 
 Figure 9 reports **absolute percentage-point gains** over density-disabled traversal on the same graph. These are differences in recall, not raw recall values or relative percentage improvements. Use the finite tolerance grid recorded with the experimental configuration.
 
-![Density-tolerance sensitivity](docs/assets/figure09_alpha.png)
+<img width="853" height="930" alt="image" src="https://github.com/user-attachments/assets/66e489e9-9f89-4d7c-bae9-df5406510c4d" />
+
 
 ### Maximum Expansion Radius
 
@@ -131,7 +132,8 @@ $$
 
 Infinity disables the spatial cap. Figure 10 compares density-enabled and density-disabled traversal **at the same radius on the same index**. An excessively tight radius can restrict useful paths, so increasing pruning strength does not necessarily improve recall.
 
-![Expansion-radius sensitivity](docs/assets/figure10_radius.png)
+<img width="867" height="930" alt="image" src="https://github.com/user-attachments/assets/bdf961c9-03df-4a79-88dd-81417686d4fc" />
+
 
 ## Distant-Neighbor Discovery and Costs
 
@@ -139,13 +141,15 @@ Infinity disables the spatial cap. Figure 10 compares density-enabled and densit
 
 Record each true distant reverse neighbor's first position in the ordered candidate list from the longest traversal. Prefixes of that list measure cumulative discovery as the available candidate budget grows. The study checks the five budget endpoints against separately measured shorter runs.
 
-![Cumulative distant-neighbor discovery gain](docs/assets/figure11_distant_discovery.png)
+<img width="1066" height="561" alt="image" src="https://github.com/user-attachments/assets/db22a569-647d-4888-bdc8-201feb050924" />
+
 
 ### Cost Breakdown
 
 The cost study uses $k=50$, $B=3200$, $\alpha=1$, and $R_{\max}=10\widehat r_k(q)$. It separates target-graph construction, shared offline density preparation, native ANN initialization, and DE exploration.
 
-![Target-graph construction and DE query-stage costs](docs/assets/figure12_cost.png)
+<img width="863" height="971" alt="image" src="https://github.com/user-attachments/assets/15be2e0b-494d-48ef-86ab-336748e017f8" />
+
 
 The figure compares DE integrations across graph indexes. It does not time all competing RANNS methods. NSG construction includes its NN-Descent input graph. The common HNSW reference and density scores are offline preparation costs; they are not repeated for each query.
 
@@ -156,21 +160,24 @@ Individual-query stage means and parallel batch QPS are different measurements. 
 <details>
 <summary>QPS–Rev-Recall@50 across five datasets and four indexes — Figure 5</summary>
 
-![QPS–Rev-Recall@50 trade-offs](docs/assets/figure05_qps.png)
+<img width="4740" height="4356" alt="image" src="https://github.com/user-attachments/assets/eb3f2843-85db-4d15-af63-3ee869881e35" />
+
 
 </details>
 
 <details>
 <summary>Neighborhood-size comparison on GIST1M — Figure 6</summary>
 
-![GIST1M neighborhood-size comparison](docs/assets/figure06_gist_k.png)
+<img width="1998" height="1770" alt="image" src="https://github.com/user-attachments/assets/15ef9fd3-ff47-40b0-b543-20d5f9ad7ea7" />
+
 
 </details>
 
 <details>
 <summary>Neighborhood-size comparison on SIFT1M — Figure 8</summary>
 
-![SIFT1M neighborhood-size comparison](docs/assets/figure08_sift_k.png)
+<img width="1998" height="1770" alt="image" src="https://github.com/user-attachments/assets/2c10aad3-901c-4b11-8ad2-3db584038cd3" />
+
 
 </details>
 
