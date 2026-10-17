@@ -9,7 +9,6 @@ This README describes the experimental settings and results reported in the pape
 ## Overview
 
 For a query $q$, reverse $k$-nearest neighbor search identifies data points that regard $q$ as one of their $k$ nearest neighbors. Let $r_k(p)$ be the distance from $p$ to its $k$-th nearest **nonself** neighbor. The exact reverse-neighbor set is
-
 $$
 \mathcal{R}_k(q)=\{p\in\mathcal{P}:\operatorname{dist}(p,q)\le r_k(p)\}.
 $$
