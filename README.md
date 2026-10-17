@@ -10,8 +10,11 @@ This README describes the experimental settings and results reported in the pape
 
 For a query $q$, reverse $k$-nearest neighbor search identifies data points that regard $q$ as one of their $k$ nearest neighbors. Let $r_k(p)$ be the distance from $p$ to its $k$-th nearest **nonself** neighbor. The exact reverse-neighbor set is
 
-$$\mathcal{R}_k(q)=\{p\in\mathcal{P}:\operatorname{dist}(p,q)\le r_k(p)\}.<img width="866" height="979" alt="download" src="https://github.com/user-attachments/assets/920adfa9-3719-4ea6-a60d-8a7a75df1e42" />
 $$
+\mathcal{R}_k(q)=\{p\in\mathcal{P}:\operatorname{dist}(p,q)\le r_k(p)\}.
+$$
+
+<img width="866" height="979" alt="download" src="https://github.com/user-attachments/assets/920adfa9-3719-4ea6-a60d-8a7a75df1e42" />
 
 The number of reverse neighbors varies across queries and need not equal $k$. A distant point can still be a reverse neighbor when its own neighborhood radius is large enough to cover the query.
 
@@ -157,29 +160,19 @@ Individual-query stage means and parallel batch QPS are different measurements. 
 
 ## Main Benchmark Figures
 
-<details>
-<summary>QPS–Rev-Recall@50 across five datasets and four indexes — Figure 5</summary>
+### QPS–Rev-Recall@50 — Figure 5
 
-<img width="4740" height="4356" alt="image" src="https://github.com/user-attachments/assets/eb3f2843-85db-4d15-af63-3ee869881e35" />
+The comparison covers five datasets and four graph indexes, with RaBitQ included as a non-graph reference.
 
-
-</details>
-
-<details>
-<summary>Neighborhood-size comparison on GIST1M — Figure 6</summary>
-
-<img width="1998" height="1770" alt="image" src="https://github.com/user-attachments/assets/15ef9fd3-ff47-40b0-b543-20d5f9ad7ea7" />
+<img width="4740" height="4356" alt="image" src="https://github.com/user-attachments/assets/1000ff0c-158d-48b3-9ac7-2b67e04621a3" />
 
 
-</details>
+### Neighborhood Size on SIFT1M and GIST1M — Figures 6 and 8
 
-<details>
-<summary>Neighborhood-size comparison on SIFT1M — Figure 8</summary>
+The combined figure presents the SIFT1M results in the top row and GIST1M results in the bottom row, varying `k` across the four graph indexes. These correspond to Figure 8 and Figure 6 in the paper, respectively.
 
-<img width="1998" height="1770" alt="image" src="https://github.com/user-attachments/assets/2c10aad3-901c-4b11-8ad2-3db584038cd3" />
+<img width="1931" height="871" alt="image" src="https://github.com/user-attachments/assets/9a22aeed-0a76-4b3b-8b09-8caa46016df3" />
 
-
-</details>
 
 ## Reproduction Workflow
 
