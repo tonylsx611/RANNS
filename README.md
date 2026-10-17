@@ -105,8 +105,13 @@ The ablation isolates **density guidance (DG)** and **spatial bounding (SB)**:
 
 Figure 7 uses SIFT1M, $k=50$, and $B=3200$. Within each index, the four variants share the native graph, initial retrieval of 50 distinct nonself candidates, and adjacency order. Density-enabled variants use $\alpha=1$; spatial-enabled variants use $R_{\max}=1.25\widehat r_k(q)$ so the bound is active. This is a diagnostic radius setting, distinct from the larger radius used in the tolerance and cost studies.
 
-<img width="866" height="979" alt="image" src="https://github.com/user-attachments/assets/4fbb1884-210c-40fb-9d30-2aaa741c7f50" />
-
+<p align="center">
+  <img
+    src="https://github.com/user-attachments/assets/4fbb1884-210c-40fb-9d30-2aaa741c7f50"
+    alt="Component ablation"
+    width="75%"
+  />
+</p>
 
 At the displayed budget, each component improves overall and distant reverse recall over Base across the four indexes, and Full gives the highest recall on both metrics. The benefit is not universal across budgets: on NN-Descent at $B=12800$, Full has lower Rev-Recall than +SB. Interpret component gains under their reported budget and radius settings.
 
